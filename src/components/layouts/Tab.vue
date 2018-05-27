@@ -1,31 +1,22 @@
 <template>
   <div class="tab">
-    <router-link :to="'/'" class="item">
+    <a class="item" @click.stop="$emit('tabChange', 0)">
       <span class="item-img" :class="[ !isProfile ? 'message_active' : 'message_inactive']"></span>
       <span :class="{inactive : isProfile}">我的消息</span>
-    </router-link>
+    </a>
 
-    <router-link :to="'/profile'" class="item">
+    <a class="item" @click.stop="$emit('tabChange', 1)">
       <span class="item-img"
             :class="[ isProfile  ? 'profile-active' : 'profile-inactive']"></span>
       <span :class="{inactive : !isProfile}">个人中心</span>
-    </router-link>
+    </a>
   </div>
 </template>
 
 <script>
   export default {
     name: "Tab",
-    data() {
-      return {
-        isProfile: this.$route.path === '/profile'
-      }
-    },
-    watch: {
-      '$route'(to, from) {
-        this.isProfile = this.$route.path === '/profile'
-      }
-    },
+    props: ['isProfile'],
   }
 </script>
 

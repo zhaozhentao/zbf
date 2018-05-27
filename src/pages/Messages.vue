@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
+  <div class="home-container">
     Message
   </div>
 </template>
@@ -7,10 +7,9 @@
 <script>
   export default {
     name: "Message",
-    components: {}
   }
 </script>
 
-<style>
+<style scoped>
 
 </style>
