@@ -1,14 +1,15 @@
 <template>
   <div class="tab">
-    <a class="item" @click.stop="selectIndex = 0">
-      <span class="item-img" :class="[ selectIndex === 0 ? 'message_active' : 'message_inactive']"></span>
-      <span :class="{inactive : selectIndex !== 0}">我的消息</span>
-    </a>
+    <router-link :to="'/'" class="item">
+      <span class="item-img" :class="[ !isProfile ? 'message_active' : 'message_inactive']"></span>
+      <span :class="{inactive : isProfile}">我的消息</span>
+    </router-link>
 
-    <a class="item" @click.stop="selectIndex = 1">
-      <span class="item-img" :class="[ selectIndex === 1 ? 'profile-active' : 'profile-inactive']"></span>
-      <span :class="{inactive : selectIndex !== 1}">个人中心</span>
-    </a>
+    <router-link :to="'/profile'" class="item">
+      <span class="item-img"
+            :class="[ isProfile  ? 'profile-active' : 'profile-inactive']"></span>
+      <span :class="{inactive : !isProfile}">个人中心</span>
+    </router-link>
   </div>
 </template>
 
@@ -17,9 +18,14 @@
     name: "Tab",
     data() {
       return {
-        selectIndex: 0
+        isProfile: this.$route.path === '/profile'
       }
-    }
+    },
+    watch: {
+      '$route'(to, from) {
+        this.isProfile = this.$route.path === '/profile'
+      }
+    },
   }
 </script>
 

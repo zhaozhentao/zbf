@@ -9,7 +9,17 @@ const router = new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/pages/Home')
+      component: () => import('@/pages/Home'),
+      children: [
+        {
+          path: 'profile',
+          component: () => import('@/pages/Profile')
+        },
+        {
+          path: '',
+          component: () => import('@/pages/Messages')
+        },
+      ]
     },
   ]
 });
