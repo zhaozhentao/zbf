@@ -25,7 +25,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 56px;
+    height: 44px;
     font-size: 0;
     background: #fff;
     z-index: 999;
@@ -46,7 +46,7 @@
 
   .item-img {
     display: block;
-    margin: 6px auto 0;
+    margin: 0 auto;
     vertical-align: middle;
     width: 26px;
     height: 26px;

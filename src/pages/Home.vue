@@ -53,7 +53,7 @@
   .home-container {
     width: 100%;
     top: 0px;
-    bottom: 54px;
+    bottom: 44px;
     left: 0;
     right: 0;
     position: absolute;
