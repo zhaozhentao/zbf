@@ -20,6 +20,9 @@
         selectedIndex: 0
       }
     },
+    created() {
+      console.log("created")
+    },
     components: {
       Header,
       Messages,
