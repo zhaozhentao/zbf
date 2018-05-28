@@ -188,6 +188,7 @@
 
   .logout {
     margin-top: 16px;
+    margin-bottom: 16px;
 
     .item-title {
       float: none;
