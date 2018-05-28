@@ -21,7 +21,7 @@
   .nav-bar {
     width: 100%;
     position: fixed;
-    height: 36px;
+    height: 44px;
     background: white;
     border-bottom: 1px solid #ececec;
     text-align: center;
@@ -29,21 +29,22 @@
 
   .title {
     display: inline-block;
-    margin: 10px auto;
+    margin: 11px auto;
+    font-size: 16px;
   }
 
   .nav-back {
     position: fixed;
     top: 0px;
     left: 0px;
-    padding: 9px;
+    padding: 12px;
     display: inline-block;
   }
 
   .nav-img {
     padding: 9px;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     background: url("../../assets/back_gray_title.png") no-repeat;
   }
 </style>
