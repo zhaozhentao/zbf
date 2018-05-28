@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <keep-alive>
-      <router-view/>
-    </keep-alive>
+    <transition>
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
@@ -10,7 +12,6 @@
 
   export default {
     name: 'App',
-    components: {}
   }
 </script>
 
@@ -18,5 +19,4 @@
   $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
   @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
   @import "assets/css/global";
-
 </style>
