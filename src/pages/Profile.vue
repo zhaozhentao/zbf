@@ -106,7 +106,7 @@
   .status {
     background: #EDEDED;
     color: rgba(12, 12, 12, 0.64);
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .sum {
@@ -136,7 +136,7 @@
   .line-horizon {
     height: 1px;
     background: rgba(10, 10, 10, 0.1);
-    margin-left: 26px;
+    margin-left: 16px;
   }
 
   .button {
@@ -146,7 +146,7 @@
 
     .item-icon {
       margin-top: 12px;
-      margin-left: 24px;
+      margin-left: 16px;
       float: left;
     }
 
