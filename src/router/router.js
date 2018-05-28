@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Profile from '../pages/Profile'
 
 Vue.use(Router);
 
@@ -11,6 +10,11 @@ const router = new Router({
       path: '/',
       name: 'home',
       component: () => import('@/pages/Home'),
+    },
+    {
+      path: '/messages',
+      name: 'messages',
+      component: () => import('@/pages/HistoryMessages'),
     },
   ]
 });

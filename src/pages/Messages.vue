@@ -2,7 +2,9 @@
   <div class="home-container">
     <div style="padding-left: 16px; padding-top: 24px">
       <h1 class="title">最新消息</h1>
-      <a class="button">历史消息</a>
+      <router-link :to="`/messages`" class="button">
+        历史消息
+      </router-link>
       <a class="button">抓拍</a>
     </div>
     <div class="empty">
