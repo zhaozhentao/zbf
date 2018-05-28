@@ -36,13 +36,13 @@
       </div>
     </div>
 
-    <div class="container button" style="margin-top: 16px">
+    <router-link :to="`/shift_money`" class="container button" style="margin-top: 16px">
       <div class="row">
         <span class="item-icon icon collect"></span>
         <span class="item-title">收费汇总</span>
         <span class="icon right-arrow"></span>
       </div>
-    </div>
+    </router-link>
 
     <div style="background: white">
       <div class="container button" style="margin-top: 16px">
@@ -55,13 +55,13 @@
 
       <div class="line-horizon"></div>
 
-      <div class="container button">
+      <router-link :to="`/duty`" class="container button">
         <div class="row">
           <span class="item-icon icon duty"></span>
           <span class="item-title">选择通道上班</span>
           <span class="icon right-arrow"></span>
         </div>
-      </div>
+      </router-link>
 
     </div>
 
@@ -143,6 +143,7 @@
     background: white;
     height: 54px;
     font-size: 14px;
+    display: block;
 
     .item-icon {
       margin-top: 12px;
@@ -164,6 +165,7 @@
       display: inline-block;
       margin-top: 18px;
       margin-left: 16px;
+      color: #333333;
     }
 
     .right-arrow {

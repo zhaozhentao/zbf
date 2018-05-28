@@ -16,6 +16,21 @@ const router = new Router({
       name: 'messages',
       component: () => import('@/pages/HistoryMessages'),
     },
+    {
+      path: '/photo',
+      name: 'photo',
+      component: () => import('@/pages/Photo'),
+    },
+    {
+      path: '/shift_money',
+      name: 'shift_money',
+      component: () => import('@/pages/ShiftMoney'),
+    },
+    {
+      path: '/duty',
+      name: 'duty',
+      component: () => import('@/pages/Duty'),
+    },
   ]
 });
 
