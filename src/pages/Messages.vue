@@ -2,7 +2,7 @@
   <div class="home-container">
     <div style="padding-left: 16px; padding-top: 24px">
       <h1 class="title">最新消息</h1>
-      <router-link :to="`/messages`" class="button">历史消息</router-link>
+      <router-link to="/messages" @click.native="start" class="button">历史消息</router-link>
       <router-link :to="`/photo`" class="button">抓拍</router-link>
     </div>
     <div class="empty">
@@ -15,6 +15,12 @@
 <script>
   export default {
     name: "Message",
+    methods: {
+      start() {
+        console.log("start")
+        this.$store.commit("anim", "turn-on");
+      }
+    },
   }
 </script>
 

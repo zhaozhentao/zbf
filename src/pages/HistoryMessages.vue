@@ -1,6 +1,7 @@
 <template>
   <div>
     <TitleBar title="历史消息"/>
+    <div @click="back">haha</div>
   </div>
 </template>
 
@@ -12,6 +13,12 @@
     components: {
       TitleBar,
     },
+    methods: {
+      back() {
+        this.$store.commit("anim", 'turn-off')
+        this.$router.back();
+      }
+    }
   }
 </script>
 

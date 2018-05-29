@@ -1,16 +1,12 @@
 import Vue from 'vue'
-import vuex from 'vuex'
+import Vuex from 'vuex'
+import anim from './anim'
 
-Vue.use(vuex);
+Vue.use(Vuex);
 
-const store = new vuex.Store({
-  state: {
-    states: 'turn-on'
-  },
-  mutations: {
-    setTransition(state, states) {
-      state.states = states
-    }
+const store = new Vuex.Store({
+  modules: {
+    anim,
   }
 });
 

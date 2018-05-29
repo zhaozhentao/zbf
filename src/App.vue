@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition>
+    <transition :name="$store.state.anim.anim">
       <keep-alive>
         <router-view/>
       </keep-alive>
@@ -9,9 +9,10 @@
 </template>
 
 <script>
-
   export default {
     name: 'App',
+    watch: {
+    }
   }
 </script>
 
@@ -19,4 +20,5 @@
   $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
   @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
   @import "assets/css/global";
+  @import "assets/css/anim";
 </style>

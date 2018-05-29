@@ -21,7 +21,7 @@
       }
     },
     created() {
-      console.log("created")
+
     },
     components: {
       Header,
