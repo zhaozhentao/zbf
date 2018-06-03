@@ -1,13 +1,18 @@
 <template>
   <div class="home-container">
-    <div style="padding-left: 16px; padding-top: 24px">
+    <div style="padding-left: 16px; padding-top: 24px; display: block;">
       <h1 class="title">最新消息</h1>
       <router-link to="/messages" @click.native="start" class="button">历史消息</router-link>
       <router-link :to="`/photo`" class="button">抓拍</router-link>
     </div>
-    <div class="empty">
+
+    <div class="empty" v-show="!hasMsg">
       <div class="empty-icon"></div>
       <div style="margin-left: -18px;">恭喜您，一切正常</div>
+    </div>
+
+    <div v-show="hasMsg">
+      {{$store.state.socket.data}}
     </div>
   </div>
 </template>
@@ -17,16 +22,19 @@
     name: "Message",
     methods: {
       start() {
-        console.log("start")
         this.$store.commit("anim", "turn-on");
       }
     },
+    computed: {
+      hasMsg: function() {
+        return this.$store.state.socket.data.length !== 0
+      }
+    }
   }
 </script>
 
 <style scoped>
   .title {
-    float: left;
     font-size: 22px;
     display: inline-block;
     margin: 3px;

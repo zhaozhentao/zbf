@@ -11,7 +11,11 @@
 <script>
   export default {
     name: 'App',
-    watch: {}
+    watch: {
+      '$route'(to, from) {
+        this.$store.commit("saveToken", to.query.token);
+      }
+    }
   }
 </script>
 
