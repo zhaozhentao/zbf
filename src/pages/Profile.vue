@@ -44,8 +44,8 @@
       </div>
     </router-link>
 
-    <div style="background: white">
-      <div class="container button" style="margin-top: 16px">
+    <div class="container" style="background: white;margin-top: 16px">
+      <div class="button">
         <div class="row">
           <span class="item-icon icon scan"></span>
           <span class="item-title">扫码交班</span>
@@ -55,14 +55,13 @@
 
       <div class="line-horizon"></div>
 
-      <router-link :to="`/duty`" class="container button">
+      <router-link :to="`/duty`" class="button">
         <div class="row">
           <span class="item-icon icon duty"></span>
           <span class="item-title">选择通道上班</span>
           <span class="icon right-arrow"></span>
         </div>
       </router-link>
-
     </div>
 
     <div class="container logout button">
