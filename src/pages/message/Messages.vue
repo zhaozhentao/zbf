@@ -12,21 +12,52 @@
     </div>
 
     <div v-show="hasMsg">
-      {{$store.state.socket.data}}
+      <Msg
+        v-for="(item, index) in $store.state.socket.data"
+        v-bind:content="item"
+        :clock="clock"
+        :key="index"/>
     </div>
   </div>
 </template>
 
 <script>
+  import Msg from '../../components/layouts/Msg';
+
+  let timer = -1;
+  let self;
+
   export default {
     name: "Message",
-    methods: {
-      start() {
-        this.$store.commit("anim", "turn-on");
+    data() {
+      return {
+        clock: 0
+      }
+    },
+    components: {
+      Msg,
+    },
+    mounted() {
+      self = this;
+    },
+    methods: {},
+    watch: {
+      '$store.state.socket.data': function (data) {
+        if (timer !== -1) {
+          clearInterval(timer);
+        }
+
+        if (data.length === 0) {
+          return;
+        }
+
+        timer = setInterval(function () {
+          self.$data.clock = self.$data.clock + 1;
+        }, 1000);
       }
     },
     computed: {
-      hasMsg: function() {
+      hasMsg: function () {
         return this.$store.state.socket.data.length !== 0
       }
     }
