@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TitleBar title="抓拍"/>
+    <TitleBar title="抓拍" back="/"/>
   </div>
 </template>
 

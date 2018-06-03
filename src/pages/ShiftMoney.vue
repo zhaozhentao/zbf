@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TitleBar title="收费汇总"/>
+    <TitleBar title="收费汇总" back="/"/>
   </div>
 </template>
 

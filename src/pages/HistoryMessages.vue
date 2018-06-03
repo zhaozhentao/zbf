@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TitleBar title="历史消息"/>
+    <TitleBar title="历史消息" back="/"/>
     <div @click="back">haha</div>
   </div>
 </template>

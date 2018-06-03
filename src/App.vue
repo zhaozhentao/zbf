@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition :name="$store.state.anim.anim">
+    <transition>
       <keep-alive>
         <router-view/>
       </keep-alive>
@@ -11,8 +11,7 @@
 <script>
   export default {
     name: 'App',
-    watch: {
-    }
+    watch: {}
   }
 </script>
 

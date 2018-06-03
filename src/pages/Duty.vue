@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TitleBar title="选择通道上班"/>
+    <TitleBar title="选择通道上班" back="/"/>
   </div>
 </template>
 

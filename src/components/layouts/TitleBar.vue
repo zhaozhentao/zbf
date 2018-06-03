@@ -1,8 +1,8 @@
 <template>
   <div class="nav-bar">
-    <div class="nav-back">
+    <router-link :to="back" class="nav-back">
       <span class="icon-bg nav-img"></span>
-    </div>
+    </router-link>
 
     <span class="title">
       {{title}}
@@ -13,7 +13,7 @@
 <script>
   export default {
     name: "TitleBar",
-    props: ['title']
+    props: ['title', 'back']
   }
 </script>
 
