@@ -60,6 +60,6 @@
     width: 180px;
     height: 180px;
     background-size: contain !important;
-    background: url("../assets/photo.png") no-repeat;
+    background: url("../../assets/photo.png") no-repeat;
   }
 </style>

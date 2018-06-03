@@ -171,20 +171,20 @@
       float: right;
       margin-right: 12px;
       margin-top: 13px;
-      background: url("../assets/skip.png");
+      background: url("../../assets/skip.png");
     }
   }
 
   .collect {
-    background: url("../assets/collect.png");
+    background: url("../../assets/collect.png");
   }
 
   .scan {
-    background: url("../assets/scan.png");
+    background: url("../../assets/scan.png");
   }
 
   .duty {
-    background: url("../assets/select_channel.png");
+    background: url("../../assets/select_channel.png");
   }
 
   .logout {

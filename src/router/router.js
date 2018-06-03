@@ -14,22 +14,22 @@ const router = new Router({
     {
       path: '/messages',
       name: 'messages',
-      component: () => import('@/pages/HistoryMessages'),
+      component: () => import('@/pages/message/HistoryMessages'),
     },
     {
       path: '/photo',
       name: 'photo',
-      component: () => import('@/pages/Photo'),
+      component: () => import('@/pages/message/Photo'),
     },
     {
       path: '/shift_money',
       name: 'shift_money',
-      component: () => import('@/pages/ShiftMoney'),
+      component: () => import('@/pages/me/ShiftMoney'),
     },
     {
       path: '/duty',
       name: 'duty',
-      component: () => import('@/pages/Duty'),
+      component: () => import('@/pages/me/Duty'),
     },
   ]
 });

@@ -9,8 +9,8 @@
 
 <script>
   import Header from '@/components/layouts/Header';
-  import Messages from '@/pages/Messages';
-  import Profile from '@/pages/Profile';
+  import Messages from '@/pages/message/Messages';
+  import Profile from '@/pages/me/Profile';
   import Tab from '@/components/layouts/Tab';
 
   export default {
