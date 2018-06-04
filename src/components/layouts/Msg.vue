@@ -34,7 +34,8 @@
     computed: {
       timer() {
         this.clock;
-        return Math.floor(this.$data.create_time = (_.now() - new Date(this.content.create_time)) / 1000);
+        return _.now() - new Date(this.content.create_time);
+        // return Math.floor(this.$data.create_time = () / 1000);
       }
     }
   }
